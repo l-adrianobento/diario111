@@ -1,0 +1,281 @@
+/**/
+
+body, html {
+	height: 100%;
+	background: #f7f7f7;
+	color: #333;
+	font-size: 24px;
+}
+
+#inicio {
+	text-align: center;
+	display: table;
+	width: 100%;
+    height: 100%;
+}
+
+#titulos {
+	vertical-align:middle;
+  	display: table-cell;
+}
+
+#titulo {
+	font-weight: bold;
+	font-size: 42px;
+}
+
+.sub {
+	font-style: italic;
+	width: 64%;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 38px auto;
+}
+
+#cronometro {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+header {
+	color: #888 !important;
+	background-color: #eaeaea;
+	box-shadow: 0px 2px 25px -1px #b0b0b0;
+}
+
+header nav{
+	font-size: 0.8em !important;
+}
+
+header nav .navbar-brand {
+	font-size: 1.3em;
+	margin-left: 1rem;
+	margin-right: 2rem;
+}
+
+header nav a {
+	color: #5f5f5f !important;
+}
+
+header nav a:hover{
+	color: #444 !important;
+	text-decoration: none;
+}
+
+header nav .navbar-nav .dropdown-menu {
+	border: none;
+    border-radius: 0;
+    background: #eaeaea;
+	padding: 0;
+	/* box-shadow: 0px 2px 20px 0px #b0b0b0; */
+	font-size: 0.8em;
+}
+
+header nav .navbar-toggler {
+	border: none;
+}
+
+header nav button.navbar-toggler {
+	outline: none;
+}
+
+.posts,
+.full-post {
+	padding: 8vh 0vw;
+}
+
+.full-post .post{
+	background: #fff;
+	padding: 30px 44px;
+	box-shadow: 14px 14px 18px 2px #b0b0b0;
+}
+
+.posts .between-rows {
+	margin-bottom: 8vh;
+}
+
+.posts .post{
+	padding: 20px 26px 26px 26px;
+	background: #fff;
+	box-shadow: 10px 10px 15px 2px #b0b0b0;
+}
+
+.posts a.post:hover{
+	text-decoration: none;
+}
+
+.post .titulo,
+.full-post .post .titulo{
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #333;
+}
+
+.full-post .post .titulo{ 
+	font-size: 1.4em;
+}
+
+.post .subtitulo,
+.full-post .post .subtitulo{
+	color: #b0b0b0;
+    font-size: 0.6em;
+    font-style: italic;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+.full-post .post .subtitulo{
+	font-size: 0.9em;
+	margin-bottom: 15px;
+}
+
+.post img,
+.full-post .post img{
+	width: 100%;
+    height: 325px;
+    object-fit: cover;
+}
+
+.full-post .post .texto {
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: justify;
+}
+
+.full-post .post .img-fonte {
+	font-size: 0.5em;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+.post .data,
+.full-post .post .data {
+	position: absolute;
+    right: 2px;
+    top: -22px;
+	font-size: 0.5em;
+    font-style: italic;
+	font-weight: 100;
+	color: #b0b0b0;
+}
+.full-post .post .data {
+	right: 2px;
+    top: -24px;
+	font-size: 0.6em;
+}
+
+footer {
+	width: 100%;
+	background-color: #f7f7f7;
+	/* position: absolute;
+	bottom: 0; */
+	color: #888;
+	/* box-shadow: 0px 2px 25px 2px #b0b0b0; */
+}
+
+footer.row {
+	margin: 30px 0 0;
+}
+
+footer a{
+	color: #888;
+	display: block;
+	font-size: 0.6em;
+}
+
+footer a:hover{
+	color: #444;
+	text-decoration: none;
+}
+
+footer .dados{
+	padding: 0px 30px 10px;
+    line-height: 25px;
+}
+
+footer .dados .nomes {
+	margin-bottom: 5px;
+}
+
+footer .dados .nomes .nome:first-child{
+	text-align: right;
+}
+
+footer .dados .nomes .nome:last-child{
+	text-align: left;
+}
+
+footer .dados i {
+	font-size: 2em;
+	line-height: 2em;
+}
+
+footer .dados p{
+	font-size: 0.5em;
+	margin: 0;
+}
+
+.posts .post:last-child,
+.posts .between-rows:last-child{
+	margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+	.posts .post {
+		margin-bottom: 8vh;
+	}
+	
+	.full-post .post{
+		padding: 16px 26px;
+	}
+	
+	.full-post .post .texto {
+    		font-size: 0.6em;
+    	}
+    	
+    	.full-post .post .titulo {
+	    font-size: 1.1em;
+	}
+
+	.posts,
+	.full-post {
+		padding: 8vh 4vw;
+	}
+	
+	.full-post .post .subtitulo {
+	    font-size: 0.7em;
+	}
+
+	footer .dados .nomes .nome:first-child{
+		text-align: center;
+	}
+
+	footer .dados .nomes .nome:last-child{
+		text-align: center;
+	}
+
+	footer .dados .ponto{
+		display: none;
+	}
+
+	footer .dados i {
+		padding-top: 20px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.posts .post {
+		margin-bottom: 8vh;
+	}
+
+	.posts .post:last-child{
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+@media (min-width: 1200px) {  }
