@@ -17,6 +17,7 @@ class Posts_model extends MY_Model {
                                "DtCreated"      => "dt_created",
                                "FlgAtivo"       => "flg_ativo",
                                "LocalidadeId"   => "localidade_id",
+                               "ColaboradorId"  => "colaborador_id"
                            );
 
     public function __construct() {
@@ -30,6 +31,12 @@ class Posts_model extends MY_Model {
                 "foreign_key" => $this->_fields["LocalidadeId"],
                 "model"       => "Localidades_model",
                 "alias"       => "loc",
+                "type"        => "left",
+            ),
+            "Colaboradores" => array(
+                "foreign_key" => $this->_fields["ColaboradorId"],
+                "model"       => "Colaboradores_model",
+                "alias"       => "col",
                 "type"        => "left",
             ),
 
@@ -53,10 +60,11 @@ class Posts_model extends MY_Model {
 
         //Monta a query
         $params = array(
-                "fields" => array('Slug', 'TxtPost', 'DtCreated', 'Localidade', 'Pais'),
+                "fields" => array('Slug', 'TxtPost', 'DtCreated', 'Localidade', 'Pais', 'Colaborador'),
                 "where"  => $this->_fields['Slug']." LIKE '".$slug."' AND ".$this->_fields['FlgAtivo']." = 'S'",
                 "limit"  => array("num" => 1)
         );
+        
 
         //Executa a busca
         $dados = $this->Get($params);
@@ -77,6 +85,7 @@ class Posts_model extends MY_Model {
         $params = array(
                 "fields" => array('Slug', 'HashImagemCapa', 'DtCreated', 'Localidade', 'Pais'),
                 "where"  => $this->_fields['FlgAtivo']." = 'S'",
+                "order"  => array("field" => $this->_table_id, "dir" =>  "DESC"),
         );
 
         //Executa a busca
@@ -85,6 +94,11 @@ class Posts_model extends MY_Model {
         //Valida o que foi recebido
         if(!$dados)
             return false;
+            
+        // if($dados['DtCreated']){
+            
+        //     print_r($dados['DtCreated']);
+        // }
 
         //Retorna o registro
         return $dados;

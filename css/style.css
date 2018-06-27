@@ -39,8 +39,8 @@ body, html {
 
 header {
 	color: #888 !important;
-	background-color: #eaeaea;
-	box-shadow: 0px 2px 25px -1px #b0b0b0;
+	background-color: #f7f7f7;
+	/*box-shadow: 0px 2px 25px -1px #b0b0b0;*/
 }
 
 header nav{
@@ -54,7 +54,7 @@ header nav .navbar-brand {
 }
 
 header nav a {
-	color: #5f5f5f !important;
+	color: #888 !important;
 }
 
 header nav a:hover{
@@ -90,6 +90,11 @@ header nav button.navbar-toggler {
 	box-shadow: 14px 14px 18px 2px #b0b0b0;
 }
 
+.full-post .post .nao-encontrado{
+	text-align: center;
+	margin-bottom: 0;
+}
+
 .posts .between-rows {
 	margin-bottom: 8vh;
 }
@@ -98,6 +103,7 @@ header nav button.navbar-toggler {
 	padding: 20px 26px 26px 26px;
 	background: #fff;
 	box-shadow: 10px 10px 15px 2px #b0b0b0;
+	margin-bottom: 8vh;
 }
 
 .posts a.post:hover{
@@ -140,6 +146,14 @@ header nav button.navbar-toggler {
 	font-size: 0.8em;
 	font-style: italic;
 	text-align: justify;
+}
+
+.full-post .post .colaborador{
+    text-align: right;
+    font-size: 0.7em;
+    font-style: italic;
+    color: #b0b0b0;
+    padding-top: 20px;
 }
 
 .full-post .post .img-fonte {
@@ -245,6 +259,10 @@ footer .dados p{
 	
 	.full-post .post .subtitulo {
 	    font-size: 0.7em;
+	}
+	
+	.full-post .post .nao-encontrado{
+		font-size: 0.8em;
 	}
 
 	footer .dados .nomes .nome:first-child{

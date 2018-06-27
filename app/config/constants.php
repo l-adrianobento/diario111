@@ -51,7 +51,7 @@ if (defined('ENVIRONMENT'))
 		break;
 
 		default:
-			define('URL_SITE', 'http://localhost/diario111/');
+			define('URL_SITE', 'http://diario111.com/');
 	}
 }
 

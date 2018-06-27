@@ -46,6 +46,11 @@
 							<?php endforeach; ?>
 						</div>
 						</li>
+						<li class="nav-item">
+                            <a class="nav-link" href="<?php echo site_url()."sobre"; ?>" role="button" aria-haspopup="true" aria-expanded="false">
+							Sobre nós
+							</a>
+                        </li>
 					</ul>
 				</div>
 			</nav>

@@ -27,7 +27,7 @@ if (defined('ENVIRONMENT'))
 		break;
 
 		default:
-			$config['base_url']	= 'http://localhost/diario111';
+			$config['base_url']	= 'http://diario111.com';
 	}
 }
 
