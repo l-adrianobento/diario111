@@ -260,6 +260,10 @@ footer .dados p{
 	.full-post .post .subtitulo {
 	    font-size: 0.7em;
 	}
+
+	.post img {
+		height: 205px;
+	}
 	
 	.full-post .post .nao-encontrado{
 		font-size: 0.8em;

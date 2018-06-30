@@ -4,13 +4,13 @@
 			<?php if(isset($post) && $post): ?>
 				<div class="titulo"><?php echo $post['Pais']; ?></div>
 				<div class="subtitulo"><?php echo $post['Localidade']; ?></div>
-				<!-- <div class="data">Postado em 18 de Junho 2018</div> -->
+				<div class="data">Postado em <?php echo $post['DtCreated']; ?></div>
 				<div class="texto">
 					<?php echo $post['TxtPost']; ?>						
 				</div>
 				<div class="colaborador">Por <?php echo $post['Colaborador']; ?></div>
 			<?php else: ?>
-				<p class="nao-encontrado">Post n«ªo encontrado! :/	
+				<p class="nao-encontrado">Post nï¿½ï¿½ï¿½o encontrado! :/	
 			<?php endif; ?>
 		</div>
 	</div>

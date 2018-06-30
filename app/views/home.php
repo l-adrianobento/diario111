@@ -5,7 +5,7 @@
 				<div class="titulo"><?php echo $value['Pais']; ?></div>
 				<div class="subtitulo"><?php echo $value['Localidade']; ?></div>
 				<img src="<?php echo base_url(); ?>img/<?php echo $value['HashImagemCapa']; ?>" alt="" />
-				<!-- <div class="data">Postado em 18 de Junho 2018</div> -->
+				<div class="data">Postado em <?php echo $value['DtCreated']; ?></div>
 			</a>
 		<?php endforeach; ?>
 	</div>

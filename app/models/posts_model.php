@@ -73,6 +73,18 @@ class Posts_model extends MY_Model {
         if(!$dados)
             return false;
 
+        setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+        date_default_timezone_set('America/Sao_Paulo');
+
+        // //Trata os dados
+        foreach($dados as &$value) {
+
+            $dataPostagem = new DateTime($value["DtCreated"]);
+            $value["DtCreated"] = strftime('%A, %d de %B de %Y', strtotime($value["DtCreated"]));
+                
+        }
+        unset($value);
+
         //Retorna o registro
         return $dados[0];
     }
@@ -94,11 +106,18 @@ class Posts_model extends MY_Model {
         //Valida o que foi recebido
         if(!$dados)
             return false;
-            
-        // if($dados['DtCreated']){
-            
-        //     print_r($dados['DtCreated']);
-        // }
+
+        setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+        date_default_timezone_set('America/Sao_Paulo');
+
+        // //Trata os dados
+        foreach($dados as &$value) {
+
+            $dataPostagem = new DateTime($value["DtCreated"]);
+            $value["DtCreated"] = strftime('%A, %d de %B de %Y', strtotime($value["DtCreated"]));
+             
+        }
+        unset($value);
 
         //Retorna o registro
         return $dados;
