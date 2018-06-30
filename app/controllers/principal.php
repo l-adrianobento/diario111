@@ -8,8 +8,8 @@ class Principal extends MY_Controller {
     }
 
     public function index() {
-        
-        $dados['posts'] = $this->Posts_model->getAllPosts();
+        $dados['menu'] = $this->Posts_model->getMenu();
+        $dados['posts'] = $this->Posts_model->getPosts();
         $dados['conteudo'] = "home.php";
         $this->load->view('master', $dados);
     }

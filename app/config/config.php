@@ -23,11 +23,11 @@ if (defined('ENVIRONMENT'))
 		case 'testing':
 		case 'production':
 		case 'prod':
-			$config['base_url']	= 'http://diario111.com';
+			$config['base_url']	= 'http://localhost/diario111/';
 		break;
 
 		default:
-			$config['base_url']	= 'http://diario111.com';
+			$config['base_url']	= 'http://localhost/diario111/';
 	}
 }
 

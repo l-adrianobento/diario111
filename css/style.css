@@ -90,7 +90,12 @@ header nav button.navbar-toggler {
 	box-shadow: 14px 14px 18px 2px #b0b0b0;
 }
 
-.full-post .post .nao-encontrado{
+.posts .nao-encontrado {
+	color: #888;
+}
+
+.full-post .post .nao-encontrado,
+.posts .nao-encontrado{
 	text-align: center;
 	margin-bottom: 0;
 }
@@ -178,6 +183,31 @@ header nav button.navbar-toggler {
     top: -24px;
 	font-size: 0.6em;
 }
+
+.paises a:hover {
+	text-decoration: none;
+}
+
+.paises .pais {
+	width: 80%;
+}
+
+.paises .pais img {
+	width: inherit;
+	opacity: 0.4;
+}
+
+.paises .pais img.ativo {
+	opacity: 1;
+}
+
+.paises .pais .nome {
+	position: relative;
+	bottom: 28px;
+	color: #888;
+    font-size: 0.8em;
+}
+/*-------footer-------*/
 
 footer {
 	width: 100%;

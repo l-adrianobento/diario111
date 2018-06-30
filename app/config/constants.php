@@ -47,11 +47,11 @@ if (defined('ENVIRONMENT'))
 		case 'testing':
 		case 'production':
 		case 'prod':
-			define('URL_SITE', 'http://diario111.com/');
+			define('URL_SITE', 'http://localhost/diario111/');
 		break;
 
 		default:
-			define('URL_SITE', 'http://diario111.com/');
+			define('URL_SITE', 'http://localhost/diario111/');
 	}
 }
 

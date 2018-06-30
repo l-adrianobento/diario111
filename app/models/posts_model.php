@@ -61,7 +61,7 @@ class Posts_model extends MY_Model {
         //Monta a query
         $params = array(
                 "fields" => array('Slug', 'TxtPost', 'DtCreated', 'Localidade', 'Pais', 'Colaborador'),
-                "where"  => $this->_fields['Slug']." LIKE '".$slug."' AND ".$this->_fields['FlgAtivo']." = 'S'",
+                "where"  => "p.".$this->_fields['Slug']." LIKE '".$slug."' AND ".$this->_fields['FlgAtivo']." = 'S'",
                 "limit"  => array("num" => 1)
         );
         
@@ -89,7 +89,29 @@ class Posts_model extends MY_Model {
         return $dados[0];
     }
 
-    public function getAllPosts() {
+    public function getMenu() {
+
+        $this->use_join = true;
+
+        //Monta a query
+        $params = array(
+                "fields" => array('Slug', 'Localidade', 'Pais'),
+                "where"  => $this->_fields['FlgAtivo']." = 'S'"
+        );
+
+        //Executa a busca
+        $dados = $this->Get($params);
+
+        //Valida o que foi recebido
+        if(!$dados)
+            return false;
+
+        //Retorna o registro
+        return $dados;
+
+    }
+
+    public function getPosts($slug = false) {
 
         $this->use_join = true;
 
@@ -99,6 +121,9 @@ class Posts_model extends MY_Model {
                 "where"  => $this->_fields['FlgAtivo']." = 'S'",
                 "order"  => array("field" => $this->_table_id, "dir" =>  "DESC"),
         );
+
+        if($slug)
+            $params["where"] .= " && pais.".$this->_fields['Slug']." LIKE '".$slug."'";
 
         //Executa a busca
         $dados = $this->Get($params);

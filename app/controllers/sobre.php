@@ -8,7 +8,7 @@ class Sobre extends MY_Controller {
     }
 
     public function index() {
-        $dados['posts'] = $this->Posts_model->getAllPosts();
+        $dados['menu'] = $this->Posts_model->getMenu();
         $dados['conteudo'] = "sobre.php";
         $this->load->view('master', $dados);
     }

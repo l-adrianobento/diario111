@@ -41,11 +41,16 @@
 							Destinos
 							</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<?php foreach ($posts as $key => $value) : ?>
+							<?php foreach ($menu as $key => $value) : ?>
 								<a class="dropdown-item" href="<?php echo site_url()."post/".$value['Slug']; ?>"><?php echo $value['Localidade']; ?></a>
 							<?php endforeach; ?>
 						</div>
 						</li>
+						<li class="nav-item">
+                            <a class="nav-link" href="<?php echo site_url()."paises"; ?>" role="button" aria-haspopup="true" aria-expanded="false">
+							Países
+							</a>
+                        </li>
 						<li class="nav-item">
                             <a class="nav-link" href="<?php echo site_url()."sobre"; ?>" role="button" aria-haspopup="true" aria-expanded="false">
 							Sobre nós

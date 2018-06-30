@@ -8,8 +8,7 @@ class Post extends MY_Controller {
     }
 
     public function index($slug) {
-
-        $dados['posts'] = $this->Posts_model->getAllPosts();
+        $dados['menu'] = $this->Posts_model->getMenu();
         $dados['post'] = $this->Posts_model->getBySlug($slug);
         $dados['conteudo'] = "post.php";
         

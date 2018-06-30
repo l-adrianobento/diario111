@@ -42,6 +42,7 @@ $route['default_controller'] = "principal";
 $route['404_override'] = '';
 
 $route['post/(:any)'] = "post/index/$1";
+$route['paises/(:any)'] = "paises/por_pais/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
