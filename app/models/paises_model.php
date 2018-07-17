@@ -48,19 +48,30 @@ class Paises_model extends MY_Model {
         if(!$dados)
             return false;
 
+        $paises_ativos = [];
+        $paises_inativos = [];
+
         //Trata os dados
         foreach($dados as &$value) {
 
-            if(isset($value['TotalLugares']) && $value['TotalLugares'])
-                $value['TotalLugares'] = 'ativo';
-            else
-                $value['TotalLugares'] = '';
-                
+            if(isset($value['TotalLugares']) && $value['TotalLugares']){
+                $value['TotalLugares'] = "ativo";
+                $paises_ativos[] = $value;
+            } else {
+                $value['TotalLugares'] = "";
+                $paises_inativos[] = $value;
+            }    
         }
+
         unset($value);
 
+        $paises = array(
+            'ativos' => $paises_ativos,
+            'inativos' => $paises_inativos
+        );
+
         //Retorna o registro
-        return $dados;
+        return $paises;
     }
 
 

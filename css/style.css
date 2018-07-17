@@ -172,8 +172,8 @@ header nav button.navbar-toggler {
 .full-post .post .data {
 	position: absolute;
     right: 2px;
-    top: -22px;
-	font-size: 0.5em;
+    top: -24px;
+    font-size: 0.6em;
     font-style: italic;
 	font-weight: 100;
 	color: #b0b0b0;
@@ -181,7 +181,34 @@ header nav button.navbar-toggler {
 .full-post .post .data {
 	right: 2px;
     top: -24px;
-	font-size: 0.5em;
+	font-size: 0.6em;
+}
+
+.paises .titulo {
+    font-size: 1.4em;
+    font-weight: bold;
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 5px;
+	color: #666;
+}
+
+.paises .descricao {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	font-size: 0.7em;
+	width: 80%;
+	color: #444;
+}
+
+.paises .divisor {
+	margin-bottom: -15px;
+    padding-left: 35px;
+	font-size: 0.8em;
+	margin-top: 15px;
+	font-weight: bold;
+	color: #444;
 }
 
 .paises a:hover {
@@ -205,7 +232,7 @@ header nav button.navbar-toggler {
 	position: relative;
 	bottom: 28px;
 	color: #888;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 /*-------footer-------*/
 
@@ -269,6 +296,11 @@ footer .dados p{
 		margin-bottom: 8vh;
                 padding: 20px 18px 18px 18px;
 	}
+
+	.post .data,
+	.full-post .post .data {
+		font-size: 0.5em;
+	}
 	
 	.full-post .post{
 		padding: 16px 26px;
@@ -301,7 +333,7 @@ footer .dados p{
 	
 	.paises .pais .nome {
 		bottom: 22px;
-		font-size: 0.7em;
+		font-size: 0.6em;
 	}
 
 	footer .dados .nomes .nome:first-child{
@@ -318,6 +350,20 @@ footer .dados p{
 
 	footer .dados i {
 		padding-top: 20px;
+	}
+
+	.paises .descricao {
+		font-size: 0.6em;
+		width: 88%;
+	}
+
+	.paises .titulo {
+		font-size: 1.2em;
+	}
+
+	.paises .divisor {
+		padding-left: 28px;
+		font-size: 0.6em;
 	}
 }
 
