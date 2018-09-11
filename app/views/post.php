@@ -22,6 +22,41 @@
 	</div>
 </section>
 
+<section class="container-comment container">
+	<div class="form-comment row justify-content-center">
+		<form action="" class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10">
+			<div class="row no-gutters">
+				<textarea name="comment" id="comment" class="col-12" rows="3"></textarea>
+			</div>
+			<div class="row no-gutters justify-content-end enviar">
+				<button >Enviar comentário</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="all-comments no-gutters row justify-content-center">
+
+		<div class="a-comment col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10">
+			<p>Texto com comentario</p>
+			<span>12/05/2018</span>
+			<div class="divider"></div>
+		</div>
+
+		<div class="a-comment col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10">
+			<p>Texto com comentario</p>
+			<span>12/05/2018</span>
+			<div class="divider"></div>
+		</div>
+
+		<div class="a-comment col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10">
+			<p>Texto com comentario</p>
+			<span>12/05/2018</span>
+			<div class="divider"></div>
+		</div>
+		
+</section>
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		var modal = document.getElementById('modal-view');
@@ -46,5 +81,3 @@
 
 	});
 </script>
-
-

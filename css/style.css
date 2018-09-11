@@ -234,6 +234,57 @@ header nav button.navbar-toggler {
 	color: #888;
     font-size: 0.7em;
 }
+
+.container-comment{
+	padding: 0;
+}
+
+.container-comment .form-comment form textarea{
+	border: none;
+}
+
+.container-comment .form-comment form .enviar {
+	margin-top: 10px;
+}
+
+.container-comment .form-comment form .enviar button{
+	color: #888;
+	background: transparent;
+	border: none;
+    cursor: pointer;
+}
+
+.container-comment .form-comment form .enviar button:hover{
+	color: #444;
+}
+
+.container-comment .form-comment form .enviar button:active{
+	color: #444;
+}
+
+.container-comment .all-comments {
+	margin-top: 15px;
+}
+
+.container-comment .all-comments .a-comment{
+	background: #fff;
+	padding-left: 44px;
+	padding-right: 44px;
+}
+
+.container-comment .all-comments .a-comment .divider {
+	border-bottom: 3px solid #f7f7f7;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.container-comment .all-comments .a-comment:first-child{
+	padding-top: 30px;
+}
+
+.container-comment .all-comments .a-comment:last-of-type {
+	padding-bottom: 30px;
+}
 /*-------footer-------*/
 
 footer {
@@ -289,6 +340,10 @@ footer .dados p{
 
 .posts .between-rows:last-child{
 	margin-bottom: 0;
+}
+
+.negrito {
+	font-weight: bold;
 }
 
 @media (max-width: 575.98px) {
