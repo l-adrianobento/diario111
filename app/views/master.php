@@ -44,8 +44,8 @@
 								<?php foreach ($menu as $key => $value) : ?>
 									<li class="dropdown-submenu" aria-labelledby="navbarDropdown"><a class="dropdown-item dropdown-toggle"><?php echo $key; ?></a>
 										<ul class="dropdown-menu">
-											<?php foreach ($value as  $post) : ?>
-												<li><a class="dropdown-item" href="<?php echo site_url()."post/".$post['Slug']; ?>"><?php echo $post['Localidade']; ?></a></li>
+											<?php foreach ($value as $post_item) : ?>
+												<li><a class="dropdown-item" href="<?php echo site_url()."post/".$post_item['Slug']; ?>"><?php echo $post_item['Localidade']; ?></a></li>
 											<?php endforeach; ?>
 										</ul>
 									</li>
