@@ -40,11 +40,17 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Destinos
 							</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<?php foreach ($menu as $key => $value) : ?>
-								<a class="dropdown-item" href="<?php echo site_url()."post/".$value['Slug']; ?>"><?php echo $value['Localidade']; ?></a>
-							<?php endforeach; ?>
-						</div>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<?php foreach ($menu as $key => $value) : ?>
+									<li class="dropdown-submenu" aria-labelledby="navbarDropdown"><a class="dropdown-item dropdown-toggle"><?php echo $key; ?></a>
+										<ul class="dropdown-menu">
+											<?php foreach ($value as  $post) : ?>
+												<li><a class="dropdown-item" href="<?php echo site_url()."post/".$post['Slug']; ?>"><?php echo $post['Localidade']; ?></a></li>
+											<?php endforeach; ?>
+										</ul>
+									</li>
+								<?php endforeach; ?>
+							</ul>
 						</li>
 						<li class="nav-item">
                             <a class="nav-link" href="<?php echo site_url()."paises"; ?>" role="button" aria-haspopup="true" aria-expanded="false">

@@ -95,7 +95,7 @@ class Posts_model extends MY_Model {
 
         //Monta a query
         $params = array(
-                "fields" => array('Slug', 'Localidade', 'Pais'),
+                "fields" => array('Slug', 'Localidade', 'Pais', 'PaisId'),
                 "where"  => $this->_fields['FlgAtivo']." = 'S'"
         );
 
@@ -106,8 +106,13 @@ class Posts_model extends MY_Model {
         if(!$dados)
             return false;
 
+        $menu = array();
+        foreach($dados as $key => $value){
+            $menu[$value['Pais']][] = $value;
+        }
+
         //Retorna o registro
-        return $dados;
+        return $menu;
 
     }
 
