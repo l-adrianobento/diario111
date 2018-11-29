@@ -224,21 +224,23 @@ header nav button.navbar-toggler {
 }
 
 .paises .titulo {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: bold;
-	margin-top: 20px;
+	margin-top: 25px;
 	width: 100%;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	color: #666;
+	font-family: myFirstFont;
 }
 
 .paises .descricao {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 15px;
-	font-size: 0.7em;
-	width: 80%;
-	color: #444;
+	font-size: 0.75em;
+    width: 80%;
+    font-family: myFirstFont;
+    color: #888;
 }
 
 .paises .divisor {
@@ -247,7 +249,8 @@ header nav button.navbar-toggler {
 	font-size: 0.8em;
 	margin-top: 15px;
 	font-weight: bold;
-	color: #444;
+	color: #666;
+	font-family: myFirstFont;
 }
 
 .paises a:hover {
@@ -271,7 +274,8 @@ header nav button.navbar-toggler {
 	position: relative;
 	bottom: 28px;
 	color: #888;
-    font-size: 0.7em;
+	font-size: 0.6em;
+    font-family: myFirstFont;
 }
 
 .container-comment{
@@ -339,9 +343,10 @@ footer.row {
 }
 
 footer a{
-	color: #888;
+	color: #aaa;
 	display: block;
 	font-size: 0.6em;
+	font-family: myFirstFont;
 }
 
 footer a:hover{
@@ -430,7 +435,12 @@ footer .dados p{
 	
 	.paises .pais .nome {
 		bottom: 22px;
-		font-size: 0.6em;
+		font-size: 0.5em;
+	}
+
+	footer a {
+		font-size: 0.5em;
+		line-height: 1.4em;
 	}
 
 	footer .dados .nomes .nome:first-child{
